@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import random
+import random, tweepy, creds.py
 
 lion = open("lion.txt", "r")
 onizuka = open("onizuka.txt", "r")
