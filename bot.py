@@ -9,15 +9,17 @@ from creds import *
 # The songs' files that will be used:
 lion = open("lion.txt", "r")
 onizuka = open("onizuka.txt", "r")
+ninety1s = open("91s.txt", "r")
 
 
 # Catching all the lines for each song:
 lionLines = lion.readlines()
 oniLines = onizuka.readlines()
+ninety1sLines = ninety1s.readlines()
 
 
 # Regrouping all the lines in one list:
-allLines = [lionLines, oniLines]
+allLines = [lionLines, oniLines, ninety1sLines]
 
 # Catching one random line in the list containing every song:
 randomLine = random.choice(random.choice(allLines))
@@ -44,3 +46,4 @@ if __name__ == "__main__":
 
 lion.close()
 onizuka.close()
+ninety1s.close()
