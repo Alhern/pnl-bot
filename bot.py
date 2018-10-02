@@ -21,8 +21,6 @@ ninety1sLines = ninety1s.readlines()
 # Regrouping all the lines in one list:
 allLines = [lionLines, oniLines, ninety1sLines]
 
-# Catching one random line in the list containing every song:
-randomLine = random.choice(random.choice(allLines))
 
 # Authenticating
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
@@ -34,6 +32,7 @@ api = tweepy.API(auth)
 def main():
     while True:
         try:
+            randomLine = random.choice(random.choice(allLines))
             api.update_status(randomLine)
             print("Successfully tweeted: ", randomLine)
             sleep(1800)
