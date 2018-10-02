@@ -32,12 +32,14 @@ api = tweepy.API(auth)
 
 # Time to tweet:
 def main():
-    try:
-        api.update_status(randomLine)
-        print("Successfully tweeted: ", randomLine)
-        sleep(1800)
-    except tweepy.TweepError as e:
-        print(e.api_code, "\n", e.reason)
+    while True:
+        try:
+            api.update_status(randomLine)
+            print("Successfully tweeted: ", randomLine)
+            sleep(1800)
+        except tweepy.TweepError as e:
+            print(e.api_code, e.reason)
+            continue
 
 
 if __name__ == "__main__":
